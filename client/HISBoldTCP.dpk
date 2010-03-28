@@ -1,0 +1,55 @@
+package HISBoldTCP;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Bold TCP OSS Client Component'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  indy,
+  vcl,
+  visualclx,
+  designide,
+  vclactnband,
+  vclx,
+  vcljpg,
+  vcldb,
+  dbrtl,
+  Bold40D7,
+  Bold40D7UDPProp,
+  GmXml_D7;
+
+contains
+  HISBoldTCPPropagator in 'HISBoldTCPPropagator.pas',
+  BoldTCPResourceStrings in '..\common\BoldTCPResourceStrings.pas',
+  BoldTCPGlobals in '..\common\BoldTCPGlobals.pas',
+  idBoldClient in 'idBoldClient.pas',
+  unClientThread in 'unClientThread.pas',
+  unLockHolder in 'unLockHolder.pas',
+  unLockHandler in 'unLockHandler.pas',
+  DispatcherUnit in 'DispatcherUnit.pas',
+  NotificationUnit in 'NotificationUnit.pas';
+
+end.
